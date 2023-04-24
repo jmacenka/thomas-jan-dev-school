@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Send SMS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="center-align">Send SMS</h1>
+    <form action="/send_sms" method="POST">
+      <div class="input-field">
+        <input id="to_number" type="text" name="to_number" required>
+        <label for="to_number">To Number</label>
+      </div>
+      <div class="input-field">
+        <textarea id="message" class="materialize-textarea" name="message" required></textarea>
+        <label for="message">Message</label>
+      </div>
+      <button class="btn waves-effect waves-light" type="submit" name="action">Send SMS
+        <i class="material-icons right">send</i>
+      </button>
+    </form>
+  </div>
+</body>
+</html>
