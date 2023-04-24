@@ -1,0 +1,43 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>120</x><y>450</y><w>210</w><h>250</h></coordinates><panel_attributes>Sender
+--
+# Fiexed Parameters
+-id: int
+-friendlyName: str
+--
+# dynamic Parameters
+- server: Server
+- 
+---
+connectToServer(server: Server)
+sendMessage(new_message: Message) -&gt; sent_sucessfully : bool
+--
+# Responsibilities
+Responsibilities
+-- Resp1
+*-- Resp2*</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>590</y><w>210</w><h>190</h></coordinates><panel_attributes>Message
+--
+-id: int
+--
+-UUID: uuid4
+-from_numner: PhoneNumber
+-to_number: PhoneNumber
+-message: string
+-sent_succesfully: bool
+--
+Responsibilities
+-- Resp1
+*-- Resp2*</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>750</x><y>530</y><w>210</w><h>190</h></coordinates><panel_attributes>Server
+--
+-id: int
+--
+-url: string
+-username: str
+-token: string
+--
+connect -&gt; handle
+--
+Responsibilities
+-- Resp1
+*-- Resp2*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>530</y><w>450</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;-
+m1=n..1</panel_attributes><additional_attributes>430;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>10</x><y>10</y><w>190</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n</panel_attributes><additional_attributes>10;10;170;10</additional_attributes></element></diagram>
